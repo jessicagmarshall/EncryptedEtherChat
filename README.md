@@ -1,3 +1,6 @@
+# EncryptedEtherChat
+## an Ethereum-enabled chat built with the OWS Signal Protocol
+
 # libsignal-protocol-javascript
 
 [![Build Status](https://travis-ci.org/WhisperSystems/libsignal-protocol-javascript.svg?branch=master)](https://travis-ci.org/WhisperSystems/libsignal-protocol-javascript)

@@ -1,0 +1,23 @@
+{
+  "name": "ethchat",
+  "version": "1.0.0",
+  "description": "signal protocol encrypted chat system that also required users to log in via ethereum addresses",
+  "main": "install.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicagmarshall/EncryptedEtherChat.git"
+  },
+  "author": "Jessica Marshall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicagmarshall/EncryptedEtherChat/issues"
+  },
+  "homepage": "https://github.com/jessicagmarshall/EncryptedEtherChat#readme",
+  "dependencies": {
+    "node-webcrypto-ossl": "^1.0.33",
+    "signal-protocol": "^0.1.3"
+  }
+}
