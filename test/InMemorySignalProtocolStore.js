@@ -1,7 +1,15 @@
-  function SignalProtocolStore() {
+let util = require('../ethChat/node_modules/signal-protocol/src/helpers.js');
+let libsignal = require('signal-protocol')
+
+module.exports = SignalProtocolStore;
+
+// constructor
+function SignalProtocolStore() {
   this.store = {};
+  //console.log('SignalProtocolStore')
 }
 
+// object prototype
 SignalProtocolStore.prototype = {
   Direction: {
     SENDING: 1,
@@ -9,10 +17,12 @@ SignalProtocolStore.prototype = {
   },
 
   getIdentityKeyPair: function() {
-    return Promise.resolve(this.get('identityKey'));
+    return Promise.resolve(this.get('identityKey'))
+      .catch(() => { console.log('failed')});
   },
   getLocalRegistrationId: function() {
-    return Promise.resolve(this.get('registrationId'));
+    return Promise.resolve(this.get('registrationId'))
+      .catch(() => { console.log('failed')});
   },
   put: function(key, value) {
     if (key === undefined || value === undefined || key === null || value === null)
@@ -57,6 +67,7 @@ SignalProtocolStore.prototype = {
       throw new Error("Tried to put identity key for undefined/null key");
 
     var address = new libsignal.SignalProtocolAddress.fromString(identifier);
+    console.log(address, identifier)
 
     var existing = this.get('identityKey' + address.getName());
     this.put('identityKey' + address.getName(), identityKey)
