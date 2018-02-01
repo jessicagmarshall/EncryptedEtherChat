@@ -1,5 +1,6 @@
 # EncryptedEtherChat
-## an Ethereum-enabled chat built with the OWS Signal Protocol
+### an Ethereum-enabled chat built with the OWS Signal Protocol
+### many, many thanks to [the JS implementation of the protocol](https://github.com/signalapp/libsignal-protocol-javascript)
 
 # libsignal-protocol-javascript
 
